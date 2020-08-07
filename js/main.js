@@ -5,8 +5,10 @@ var instance = new vidbg('.video', {
   overlay: false, // Boolean to display the overlay or not
 });
 var rellax = new Rellax('.rocket');
-
+const rocket = document.querySelector('.rocket');
 if(document.body.clientWidth < 769) {
 	rellax.destroy();
+	rocket.setAttribute('data-aos', 'fade-right')
+	rocket.setAttribute('data-aos-delay', '500')
 }
 AOS.init();
